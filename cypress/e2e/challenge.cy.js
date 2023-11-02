@@ -38,7 +38,7 @@ describe('template spec', () => {
 
   it.only('Edit data user baru', () => {
     cy.get(".table td")
-    .contains("user")
+    .contains("user baru")
     .parent()
     .find("a")
     .contains("Edit")
@@ -46,7 +46,7 @@ describe('template spec', () => {
 
     /* ==== Generated with Cypress Studio ==== */
     cy.get('#name').click();
-    cy.get('#name').clear('user ');
+    cy.get('#name').clear('user baru');
     cy.get('#name').type('user baru diedit');
     cy.get('.btn-primary').contains("Submit").click();
     cy.get(".table td").contains("user").should('have.text', 'user baru diedit');
